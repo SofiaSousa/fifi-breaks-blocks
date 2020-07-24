@@ -24,14 +24,24 @@ You will need a **Ruby** environment that can build native extensions and the Ru
 $ gem install ruby2d
 ```
 
-### Prebuild
+And [Rake](https://github.com/ruby/rake) to run the build task.
 
 ```
-$ rake prebuild
+$ gem install rake
 ```
 
 ### Build
 
-```bash
-$ ruby2d build --all main-build.rb
+This build task
+
 ```
+$ rake build
+```
+
+## TO DO
+
+- Game over
+- Add the points system and a scorebar
+- Surprise blocks
+- New weapons with different kind shots
+- Sounds?

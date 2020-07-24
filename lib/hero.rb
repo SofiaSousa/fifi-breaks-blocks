@@ -2,7 +2,7 @@ require './lib/weapon.rb'
 
 # The game hero
 class Hero
-  attr_reader :shots
+  attr_reader :body, :shots
 
   def initialize
     @width = 150

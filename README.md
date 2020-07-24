@@ -1,4 +1,4 @@
-# Sofs Breaks Blocks
+# 🚀👩‍🚀 Fifi Breaks Blocks
 
 This is my first game using [Ruby 2D](https://www.ruby2d.com/) lib!
 
@@ -39,7 +39,7 @@ $ ruby main.rb
 
 ### Build
 
-This build task
+To generate the `app` file dir, run:
 
 ```
 $ rake build
@@ -47,8 +47,6 @@ $ rake build
 
 ## TO DO
 
-- Game over
-- Add the points system and a scorebar
 - Surprise blocks
 - New weapons with different kind shots
 - Sounds?

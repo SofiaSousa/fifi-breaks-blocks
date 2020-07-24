@@ -1,6 +1,7 @@
 require './lib/block.rb'
 
-class Line
+# A raw of blocks
+class Raw
   attr_reader :blocks
 
   N_ITEMS = 10

@@ -1,3 +1,7 @@
+# A block object to destroy that can have one of these 3 colors:
+# - yellow : 1 shot to destroy
+# - orange : 2 shots to destroy
+# - red    : 3 shots to destroy
 class Block
   attr_reader :body, :status
 

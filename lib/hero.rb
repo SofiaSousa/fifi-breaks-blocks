@@ -1,5 +1,6 @@
 require './lib/weapon.rb'
 
+# The game hero
 class Hero
   attr_reader :shots
 

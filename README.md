@@ -30,6 +30,12 @@ And [Rake](https://github.com/ruby/rake) to run the build task.
 $ gem install rake
 ```
 
+And to run the app:
+
+```
+$ ruby main.rb
+```
+
 ### Build
 
 This build task

@@ -14,6 +14,7 @@ Use the following keys:
 
 * Arrow `left` and `right` to move
 * `Space` to shoot
+* `P` to pause the game
 * `Esc` to close the game
 
 ## Development

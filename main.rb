@@ -6,7 +6,7 @@ require './lib/limit.rb'
 require './lib/overlay.rb'
 
 # World settings
-set title: 'Sofs Breaks Blocks!',
+set title: 'Fifi Breaks Blocks!',
     background: 'navy',
     width: 640,
     height: 960,
@@ -19,8 +19,16 @@ start_time = Time.now
 
 hero = Hero.new
 limit = Limit.new
-gover_overlay = Overlay.new(text: 'GAME OVER')
-pause_overlay = Overlay.new(text: 'PAUSED')
+gover_overlay = Overlay.new(text: '- GAME OVER -')
+pause_overlay = Overlay.new(text: '- PAUSED -')
+score = 0
+score_bar = Text.new(
+  score,
+  color:
+  'white',
+  x: 20, y: Window.height - 25,
+  z: 20
+)
 
 # Add initial blocks
 blocks = []
@@ -47,6 +55,7 @@ end
 # Loop
 update do
   if is_game_over
+    # gover_overlay.text = "GAME OVER - #{score}"
     gover_overlay.show
   elsif is_paused
     pause_overlay.show
@@ -74,6 +83,8 @@ update do
       hero.shots.each do |shot|
         if block.collision_detected?(shot)
           shot.hit(block)
+          score += 10
+          score_bar.text = score
 
           hero.shots.delete(shot)
           blocks.delete(block) if block.is_detroyed?

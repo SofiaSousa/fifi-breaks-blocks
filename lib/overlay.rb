@@ -2,7 +2,7 @@ class Overlay
   def initialize(opt = {})
     @body = draw
     @text_body = draw_text(opt[:text])
-
+    center_text
     hide # hidden by defautl
   end
 
@@ -21,17 +21,13 @@ class Overlay
   end
 
   def draw_text(text)
-    t = Text.new(
+    text = text || ''
+    Text.new(
       text,
       size: 60,
       color: 'red',
       z: 100
     )
-
-    t.x = (Window.width / 2) - (t.width / 2)
-    t.y = (Window.height / 2) - (t.height / 2)
-
-    t
   end
 
   def show
@@ -42,5 +38,17 @@ class Overlay
   def hide
     @body.remove
     @text_body.remove
+  end
+
+  def text=(new_text)
+    @text_body.text = new_text
+    center_text
+  end
+
+  private
+
+  def center_text
+    @text_body.x = (Window.width / 2) - (@text_body.width / 2)
+    @text_body.y = (Window.height / 2) - (@text_body.height / 2)
   end
 end
